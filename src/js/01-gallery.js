@@ -8,12 +8,11 @@ console.log(galleryItems);
 
 
 //tworzenie znacznika
-
 const gallery = document.querySelector(".gallery");
 
 const elements = [];
 
-for (const galleryItem of galleryItems) {
+galleryItems.forEach((galleryItem) => {
   console.log(galleryItem.preview);
   console.log(galleryItem.original);
   console.log(galleryItem.description);
@@ -29,14 +28,14 @@ for (const galleryItem of galleryItems) {
 
   const image = document.createElement("img");
   image.classList.add("gallery__image");
-
   image.src = galleryItem.preview;
-  image.dataset.source= galleryItem.original;
+  image.dataset.source = galleryItem.original;
   image.alt = galleryItem.description;
+
   link.append(image);
 
   elements.push(item);
-}
+});
 
 console.log(elements);
 

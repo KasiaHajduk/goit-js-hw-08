@@ -31,7 +31,6 @@ const updateForm = () => {
     email.value = follow.email;
     message.value = follow.message;
   }
-  else return;
 };
   
 updateForm();
